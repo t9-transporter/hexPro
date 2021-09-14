@@ -1,7 +1,20 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,700");
 body {
   font-family: "Montserrat", sans-serif;
-  background: #3ea0eb;
+  /* background: #3ea0eb; */
+  /* background: linear-gradient(to right top, #52c234, #6a9113, #141517); */
+  /* background: linear-gradient(to right top, #00dbde, #33001b); */
+  /* background: linear-gradient(
+    to right top,
+    #f13806,
+    #ff7200,
+    #ffcc02,
+    #0735ee,
+    #0126a3
+  ); */
+  background: linear-gradient(to right top, #1a2a6c, #b21f1f, #fdbb2d);
+  background-repeat: no-repeat;
+  background-size: 100% 103%;
 }
 *,
 *::before,
@@ -68,12 +81,45 @@ body {
   z-index: -1;
 }
 .honeycomb-cell::before {
-  background: #fff;
-  transform: scale(1.055);
+  /* background: #fff; */
+  transform: scale(0.8);
+  animation: bgColor 5s infinite linear;
 }
+
+@keyframes bgColor {
+  0% {
+    background-color: #ff0000;
+  }
+  25% {
+    background-color: #ffa500;
+  }
+  37.5% {
+    background-color: #ffff00;
+  }
+  50% {
+    background-color: #7fff00;
+  }
+  62.5% {
+    background-color: #00ffff;
+  }
+  75% {
+    background-color: #0000ff;
+  }
+  87.5% {
+    background-color: #9932cc;
+  }
+  100% {
+    background-color: #ff1493;
+  }
+}
+
+.honeycomb-cell:hover::before {
+  transform: scale(1.07);
+}
+
 .honeycomb-cell::after {
   background: #3ea0eb;
-  opacity: 0.5;
+  opacity: 0.2;
   transition: opacity 350ms;
 }
 .honeycomb-cell:hover .honeycomb-cell__title {
@@ -150,7 +196,7 @@ body {
     margin-right: calc(50% - 300px);
   }
 
-  .honeycomb-cell:nth-child(n + 34) {
+  .honeycomb-cell:nth-child(n + 33) {
     display: none;
   }
 }
@@ -158,31 +204,184 @@ body {
   .honeycomb-cell:nth-child(7),
   .honeycomb-cell:nth-child(18),
   .honeycomb-cell:nth-child(29) {
-    margin-left: calc(50% - 350px);
+    margin-left: calc(50% - 370px);
   }
   .honeycomb-cell:nth-child(11),
   .honeycomb-cell:nth-child(22),
-  .honeycomb-cell:nth-child(34) {
-    margin-right: calc(50% - 350px);
+  .honeycomb-cell:nth-child(33) {
+    margin-right: calc(50% - 370px);
   }
 
-  .honeycomb-cell:nth-child(n + 41) {
+  .honeycomb-cell:nth-child(n + 40) {
     display: none;
   }
 }
-@media (min-width: 987px) and (max-width: 1024px) {
+@media (min-width: 987px) and (max-width: 1123px) {
   .honeycomb-cell:nth-child(8),
   .honeycomb-cell:nth-child(21),
-  .honeycomb-cell:nth-child(35) {
+  .honeycomb-cell:nth-child(34) {
     margin-left: calc(50% - 420px);
   }
   .honeycomb-cell:nth-child(13),
   .honeycomb-cell:nth-child(26),
-  .honeycomb-cell:nth-child(40) {
+  .honeycomb-cell:nth-child(39) {
     margin-right: calc(50% - 420px);
   }
 
-  .honeycomb-cell:nth-child(n + 48) {
+  .honeycomb-cell:nth-child(n + 47) {
+    display: none;
+  }
+}
+
+@media (min-width: 1124px) and (max-width: 1261px) {
+  .honeycomb-cell:nth-child(9),
+  .honeycomb-cell:nth-child(24),
+  .honeycomb-cell:nth-child(39) {
+    margin-left: calc(50% - 500px);
+  }
+  .honeycomb-cell:nth-child(15),
+  .honeycomb-cell:nth-child(30),
+  .honeycomb-cell:nth-child(45) {
+    margin-right: calc(50% - 500px);
+  }
+
+  .honeycomb-cell:nth-child(n + 54) {
+    display: none;
+  }
+}
+
+@media (min-width: 1262px) and (max-width: 1399px) {
+  .honeycomb-cell:nth-child(10),
+  .honeycomb-cell:nth-child(27),
+  .honeycomb-cell:nth-child(44) {
+    margin-left: calc(50% - 550px);
+  }
+  .honeycomb-cell:nth-child(17),
+  .honeycomb-cell:nth-child(34),
+  .honeycomb-cell:nth-child(51) {
+    margin-right: calc(50% - 550px);
+  }
+
+  .honeycomb-cell:nth-child(n + 61) {
+    display: none;
+  }
+}
+
+@media (min-width: 1400px) and (max-width: 1539px) {
+  .honeycomb-cell:nth-child(11),
+  .honeycomb-cell:nth-child(30),
+  .honeycomb-cell:nth-child(49) {
+    margin-left: calc(50% - 620px);
+  }
+  .honeycomb-cell:nth-child(19),
+  .honeycomb-cell:nth-child(38),
+  .honeycomb-cell:nth-child(57) {
+    margin-right: calc(50% - 620px);
+  }
+
+  .honeycomb-cell:nth-child(n + 68) {
+    display: none;
+  }
+}
+
+@media (min-width: 1540px) and (max-width: 1677px) {
+  .honeycomb-cell:nth-child(12),
+  .honeycomb-cell:nth-child(33),
+  .honeycomb-cell:nth-child(54) {
+    margin-left: calc(50% - 700px);
+  }
+  .honeycomb-cell:nth-child(21),
+  .honeycomb-cell:nth-child(42),
+  .honeycomb-cell:nth-child(63) {
+    margin-right: calc(50% - 700px);
+  }
+
+  .honeycomb-cell:nth-child(n + 75) {
+    display: none;
+  }
+}
+
+@media (min-width: 1678px) and (max-width: 1815px) {
+  .honeycomb-cell:nth-child(13),
+  .honeycomb-cell:nth-child(36),
+  .honeycomb-cell:nth-child(59) {
+    margin-left: calc(50% - 760px);
+  }
+  .honeycomb-cell:nth-child(23),
+  .honeycomb-cell:nth-child(46),
+  .honeycomb-cell:nth-child(69) {
+    margin-right: calc(50% - 760px);
+  }
+
+  .honeycomb-cell:nth-child(n + 82) {
+    display: none;
+  }
+}
+
+@media (min-width: 1816px) and (max-width: 1953px) {
+  .honeycomb-cell:nth-child(14),
+  .honeycomb-cell:nth-child(39),
+  .honeycomb-cell:nth-child(64) {
+    margin-left: calc(50% - 840px);
+  }
+  .honeycomb-cell:nth-child(25),
+  .honeycomb-cell:nth-child(50),
+  .honeycomb-cell:nth-child(75) {
+    margin-right: calc(50% - 840px);
+  }
+
+  .honeycomb-cell:nth-child(n + 89) {
+    display: none;
+  }
+}
+
+@media (min-width: 1954px) and (max-width: 2093px) {
+  .honeycomb-cell:nth-child(15),
+  .honeycomb-cell:nth-child(42),
+  .honeycomb-cell:nth-child(69) {
+    margin-left: calc(50% - 900px);
+  }
+  .honeycomb-cell:nth-child(27),
+  .honeycomb-cell:nth-child(54),
+  .honeycomb-cell:nth-child(81) {
+    margin-right: calc(50% - 900px);
+  }
+
+  .honeycomb-cell:nth-child(n + 96) {
+    display: none;
+  }
+}
+
+@media (min-width: 2094px) and (max-width: 2231px) {
+  .honeycomb-cell:nth-child(16),
+  .honeycomb-cell:nth-child(45),
+  .honeycomb-cell:nth-child(74) {
+    margin-left: calc(50% - 970px);
+  }
+  .honeycomb-cell:nth-child(29),
+  .honeycomb-cell:nth-child(58),
+  .honeycomb-cell:nth-child(87) {
+    margin-right: calc(50% - 970px);
+  }
+
+  .honeycomb-cell:nth-child(n + 103) {
+    display: none;
+  }
+}
+
+@media (min-width: 2232px) {
+  .honeycomb-cell:nth-child(17),
+  .honeycomb-cell:nth-child(48),
+  .honeycomb-cell:nth-child(79) {
+    margin-left: calc(50% - 1050px);
+  }
+  .honeycomb-cell:nth-child(31),
+  .honeycomb-cell:nth-child(62),
+  .honeycomb-cell:nth-child(93) {
+    margin-right: calc(50% - 1050px);
+  }
+
+  .honeycomb-cell:nth-child(n + 110) {
     display: none;
   }
 }
